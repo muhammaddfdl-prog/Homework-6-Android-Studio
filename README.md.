@@ -1,39 +1,42 @@
-#Task 5: Project Structure
+#Task 5: Struktur Proyek
 
-a. Where is `MainActivity.kt` located?
+a. Di mana lokasi file `MainActivity.kt`?
 
-app/src/main/java/com/example/myfirstcomposeapp/MainActivity.kt
+File `MainActivity.kt` berada di lokasi:
 
-b. Which file contains the app-level Gradle configuration?
+`app/src/main/java/com/example/myfirstcomposeapp/MainActivity.kt`
 
-app/build.gradle.kts
+b. File mana yang berisi konfigurasi Gradle untuk aplikasi?
 
-c. Which line in the original code displays the launcher image?
+File konfigurasi Gradle pada tingkat aplikasi berada di:
 
-The original launcher image is displayed using an `Image` composable with `painterResource`, for example:
+`app/build.gradle.kts`
 
-kotlin
+**c. Baris kode mana pada kode asli yang menampilkan gambar launcher aplikasi?**
+
+Gambar launcher ditampilkan menggunakan komponen `Image` dengan `painterResource`. Contoh kodenya:
+
+```kotlin
 Image(
     painter = painterResource(id = R.drawable.ic_launcher_foreground),
-    contentDescription = "App launcher icon"
+    contentDescription = "Ikon aplikasi"
 )
+```
 
-#Task 6: Preview vs Run
+Nama resource tersebut perlu disesuaikan dengan kode asli yang ada pada materi tugas.
+Task 6: Perbedaan Preview dan Run
 
-What is the difference between Preview and Run?
+Apa perbedaan Preview dan Run?
 
-Preview digunakan untuk melihat tampilan aplikasi langsung di Android Studio tanpa menginstalnya ke emulator.
-Run digunakan untuk membangun, menginstal, dan menjalankan aplikasi pada emulator atau perangkat Android. Perubahan kode perlu dijalankan kembali agar terlihat di aplikasi yang sedang berjalan.
+Preview digunakan untuk melihat tampilan aplikasi secara langsung di Android Studio tanpa harus menginstalnya di emulator. Sementara itu, Run digunakan untuk membangun, menginstal, dan menjalankan aplikasi pada emulator atau perangkat Android. Jika kode diubah, aplikasi perlu dijalankan kembali agar perubahan terlihat pada aplikasi yang sedang berjalan.
+Task 7: Komponen Jetpack Compose
 
-#Task 7: Compose Components
+| Komponen | Paket | Lapisan |
+|---|---|---|
+| `Column` | androidx.compose.foundation.layout | Foundation |
+| `Text` | androidx.compose.material3 | Material 3 |
+| `Image` | androidx.compose.foundation | Foundation |
 
- | Component | Package | Layer |
- |---|---|---|
- | `Column` | androidx.compose.foundation.layout | Foundation |
- | `Text` | androidx.compose.material3 | Material 3 |
- | `Image` | androidx.compose.foundation | Foundation |
+**Apa perbedaan pendekatan Imperative Views dan Declarative Compose?**
 
- What is the difference between imperative Views and declarative Compose?
-
- Imperative Views menggunakan perintah untuk mengubah tampilan satu per satu.
- Declarative Compose menjelaskan tampilan yang diinginkan melalui fungsi composable, lalu Compose memperbarui tampilan berdasarkan perubahan state.
+Imperative Views menggunakan perintah untuk mengubah tampilan satu per satu. Sementara itu, Declarative Compose menjelaskan tampilan yang diinginkan menggunakan fungsi composable. Compose kemudian memperbarui tampilan berdasarkan perubahan data atau *state* aplikasi.
